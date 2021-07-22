@@ -1,0 +1,23 @@
+{
+  "name": "zoo-keeper",
+  "version": "1.0.0",
+  "description": "Zoo management server ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiniSidhu/Zoo-keeper.git"
+  },
+  "author": "Nayandeep Sidhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NiniSidhu/Zoo-keeper/issues"
+  },
+  "homepage": "https://github.com/NiniSidhu/Zoo-keeper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
