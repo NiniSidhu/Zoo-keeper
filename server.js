@@ -1,8 +1,7 @@
 const { animals } = require('../Zoo-keeper/data/animals.json'); //added data from the location into a variable 
-const express = require('express'); //Initiated express - have to thing 
-const PORT = process.env.PORT || 3001; 
+const express = require('express'); //Initiated express - have to thing  
 const app = express(); 
-
+const PORT = process.env.PORT || 3001;
 //Filtering Data based off the query. 
 function filterByQuery(query, animalsArray){
 
@@ -37,7 +36,7 @@ function filterByQuery(query, animalsArray){
     return filteredResults;
 }
 
-//Adding route using GET; required 2 arguments: 1) The route client will have to fetc data from, 2) The call back function on that route 
+//Adding route using GET; required 2 arguments: 1) The route client will have to fetch data from, 2) The call back function on that route 
 app.get('/api/animals', (req, res) => {
     //Here all the animals data is loaded. 
     let results = animals; 
