@@ -1,5 +1,6 @@
 const { animals } = require('../Zoo-keeper/data/animals.json'); //added data from the location into a variable 
 const express = require('express'); //Initiated express - have to thing 
+const PORT = process.env.PORT || 3001; 
 const app = express(); 
 
 //Filtering Data based off the query. 
@@ -46,8 +47,8 @@ app.get('/api/animals', (req, res) => {
     }
     res.json(results);
 });
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`);
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
 });
 
 
