@@ -37,7 +37,7 @@ function filterByQuery(query, animalsArray){
     return filteredResults;
 }
 
-//Adding route using GET; required 2 arguments: 1) The route client will have to fetch data from, 2) The call back function on that route 
+//Adding route using GET; required 2 arguments: 1) The route client will have to fetc data from, 2) The call back function on that route 
 app.get('/api/animals', (req, res) => {
     //Here all the animals data is loaded. 
     let results = animals; 
