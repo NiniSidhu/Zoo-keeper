@@ -37,7 +37,7 @@ function filterByQuery(query, animalsArray){
 }
 
 //Adding route using GET; required 2 arguments: 1) The route client will have to fetch data from, 2) The call back function on that route 
-app.get('api/animals', (req, res) => {
+app.get('/api/animals', (req, res) => {
     //Here all the animals data is loaded. 
     let results = animals; 
     //If the client has requested results by query, then filtered results will be displated based on the requested query(ies).
