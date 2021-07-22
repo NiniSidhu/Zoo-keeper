@@ -1,7 +1,8 @@
 const { animals } = require('../Zoo-keeper/data/animals.json'); //added data from the location into a variable 
 const express = require('express'); //Initiated express - have to thing  
-const app = express(); 
 const PORT = process.env.PORT || 3001;
+const app = express(); 
+
 //Filtering Data based off the query. 
 function filterByQuery(query, animalsArray){
 
