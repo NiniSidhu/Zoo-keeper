@@ -37,6 +37,12 @@ function filterByQuery(query, animalsArray){
     return filteredResults;
 }
 
+//Function for searching for animals by ID. We could do a query search but query is used when multiple parameters are being checked.  
+function findById(id, animalsArray){
+    const result = animalsArray.filter(animal => animal.id === id) [0]; //takes ID and array of animals and returns a single animal object
+    return result; 
+}
+
 //Adding route using GET; required 2 arguments: 1) The route client will have to fetch data from, 2) The call back function on that route 
 app.get('/api/animals', (req, res) => {
     //Here all the animals data is loaded. 
@@ -47,6 +53,19 @@ app.get('/api/animals', (req, res) => {
     }
     res.json(results);
 });
+
+//Finding animals by their ID. 
+app.get('/api/animals/:id', (req, res) => {
+    const results = findById(req.params.id, animals); //Param route must come after the other GET route. Param is used when we want to return a single property back to the user.
+    //If ID is valid, we wil return the results. Otherwise we send the 404 error. Notice how we used send to return error as its a single message. 
+    if (results){
+        res.json(results);
+    }
+    else{
+        res.send(404);
+    }
+    
+})
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
